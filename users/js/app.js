@@ -14,17 +14,14 @@ const fetchuser = () => {
         .then(users => {
             users = JSON.parse(users);
             users.forEach((user) => {
-
-
                 document.body.insertAdjacentHTML("beforeend",
                     create_user_html(user.name, user.address, user.id, user.username, user.email, user.phone, user.website, user.company));
-                console.log(parseFloat(user.address.geo.lat) + " : " + parseFloat(user.address.geo.lng));
 
-                var mymap = L.map('mapid_' + user.id).setView([29.452, -164.29], 13);
-
-                // var mymap = L.map('mapid_' + user.id).setView([parseFloat(user.address.geo.lat), parseFloat(user.address.geo.lng)], 13);
+                var mymap = L.map('mapid_' + user.id).setView([parseFloat(user.address.geo.lat), parseFloat(user.address.geo.lng)], 13);
                 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-                    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                    attribution: `Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors,
+                     <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,
+                      Imagery © <a href="https://www.mapbox.com/">Mapbox</a>`,
                     maxZoom: 18,
                     id: 'mapbox/streets-v11',
                     tileSize: 512,
@@ -37,8 +34,6 @@ const fetchuser = () => {
             console.error(erreur);
         });
 };
-
-// fetchuser();
 
 function create_user_html(name, address, id, username, email, phone, website, company) {
     return `<div class="card">
@@ -84,7 +79,6 @@ function create_user_html(name, address, id, username, email, phone, website, co
 
 const fetchcomms = () => {
     var startTime = new Date().getTime();
-    console.log(new Date().getTime());
     var elapsedTime = 0;
 
     fetch("https://jsonplaceholder.typicode.com/comments", fetchOptions)
@@ -140,6 +134,7 @@ function create_comms_html(postId, id, name, email, body) {
 </div>
 </div>`;
 }
+
 
 fetchuser();
 

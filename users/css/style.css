@@ -29,24 +29,10 @@ td {
     ;
 }
 
-
-/* figure {
-    background-color: rgba(#000000, 0.7);
-    text-align: center;
-    padding: 1em 1em 0;
-    border-radius: 3px 3px 0 0;
-} */
-
-img {
-    max-height: 150px;
-    margin: auto;
-    display: inline-block;
-}
-
 .banner {
     background-image: url("../images/user.jpg");
     background-size: cover;
-    min-height: 35vh;
+    min-height: 20vh;
 }
 
 .map {
