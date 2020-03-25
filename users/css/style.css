@@ -1,0 +1,54 @@
+.user_info {
+    margin: 1em 0;
+    width: 100%;
+}
+
+.user_info>th {
+    font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+    text-align: right;
+    font-weight: 300;
+}
+
+.user_info>th,
+td {
+    width: 50%;
+    padding: 0.25em 0.5em 0;
+}
+
+.card {
+    display: inline-block;
+    width: 22vw;
+    padding: 1em;
+    border-radius: 15px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.65);
+    /* background: linear-gradient(110deg, #FDBB2D 0%, #3A1C71 100%); */
+    box-shadow: 0px 5px 20px -10px #3A1C71;
+    text-align: left;
+    vertical-align: top;
+    ;
+}
+
+
+/* figure {
+    background-color: rgba(#000000, 0.7);
+    text-align: center;
+    padding: 1em 1em 0;
+    border-radius: 3px 3px 0 0;
+} */
+
+img {
+    max-height: 150px;
+    margin: auto;
+    display: inline-block;
+}
+
+#banner {
+    background-image: url("../images/user.jpg");
+    background-size: cover;
+    min-height: 35vh;
+}
+
+.map {
+    height: 200px;
+}
