@@ -43,7 +43,7 @@ img {
     display: inline-block;
 }
 
-#banner {
+.banner {
     background-image: url("../images/user.jpg");
     background-size: cover;
     min-height: 35vh;

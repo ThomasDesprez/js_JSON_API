@@ -42,6 +42,7 @@ const fetchuser = () => {
 
 function create_user_html(name, address, id, username, email, phone, website, company) {
     return `<div class="card">
+    <div class="banner"></div>
 <h1 id="name">` + name + `</h1>
 <p id="location">` + format_address(address.city, address.suite, address.street, address.zipcode) + `</p>
 <div id="infos">
